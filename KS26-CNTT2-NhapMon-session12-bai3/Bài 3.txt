@@ -1,0 +1,16 @@
+Bài 3 : Chuẩn hóa quy trình giao vận và tra cứu giá cước 
+Phần 1. Phân tích
+1. Lookup_value
+2. Table_array
+3. Col_index-Num
+4. range_lookup
+
+Phần 2. Triển khai
+Giải pháp cho FastMove
+Tạo danh sách chọn:
+Cột chọn loại dịch vụ làm dạng nút bấm thả xuống để người nhập không phải gõ tay và không bị sai chính tả.
+Dùng hàm đối chiếu và tính tiền:
+Dùng hàm VLOOKUP để máy tự đối chiếu với bảng giá gốc và tự nhảy ra tiền cước, shipper không cần phải lấy giấy ra dò từng đơn.
+   Phần 3. Kiểm thử:
+Để có thể thay đổi #N\A bằng dòng chữ cảnh báo ta dùng hàm IFERROR
+=IFERROR(VLOOKUP(..., …, …, …), “cảnh báo”)
